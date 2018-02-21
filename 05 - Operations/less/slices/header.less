@@ -1,0 +1,45 @@
+/*===================================
+=            SITE HEADER            =
+===================================*/
+.site-header {
+    background: #fff;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+    max-width: 98%;
+    margin: 10px auto;
+    box-shadow: 0 2px 3px #e8e8e8;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: #FB7D53;
+                display: block;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 14px;
+                letter-spacing: 0.1em;
+                padding: 0 5px;
+                text-decoration: none;
+
+                &:before,
+                &:after { content: '*'; }
+
+                &:hover,
+                &:focus {
+                    color: #FF0063;
+                }
+            }
+
+            // &:nth-child(even) a { color: green; }
+            // &:nth-child(4) a { color: green; }
+            // &:last-child a { color: green; }
+        }
+    }
+}

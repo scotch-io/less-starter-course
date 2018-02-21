@@ -1,0 +1,12 @@
+body {
+  background: blue;
+}
+body h2 {
+  color: #fff;
+}
+body p {
+  color: #fff;
+}
+body hr {
+  margin: 25px 0;
+}

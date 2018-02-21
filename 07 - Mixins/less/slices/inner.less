@@ -1,0 +1,31 @@
+/*==================================================
+=            INNER / AKA, ARTICLE STUFF            =
+==================================================*/
+article {
+    .containerize-me();
+
+    padding: 60px;
+    @media @desktop-down {
+        padding: 40px;
+    }
+    @media @phone-down {
+        padding: 20px;
+    }
+
+
+
+    // Inner Styles
+    iframe,
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 60px;
+        line-height: 1;
+
+        @media @desktop-down { font-size: 40px; }
+        @media @phone-down { font-size: 30px; }
+    }
+}

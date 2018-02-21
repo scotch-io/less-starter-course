@@ -1,0 +1,95 @@
+::-webkit-input-placeholder {
+   color: fade(@base, 55%);
+}
+:-moz-placeholder {
+   color: fade(@base, 55%);
+}
+::-moz-placeholder {
+   color: fade(@base, 55%);
+}
+:-ms-input-placeholder {
+   color: fade(@base, 55%);
+}
+input-placeholder {
+   color: fade(@base, 55%);
+}
+input, .input-style {
+
+    // Shape
+    display: block;
+    width: 100%;
+    position: relative;
+    margin: 0 auto 8px;
+
+
+    // Text Styles
+    letter-spacing: -0.01em;
+    font-size: 14px;
+    font-weight: 400;
+    .base-font;
+    color: @base;
+
+    // Background Color
+    outline: none;
+    border: solid 1px darken(@input-color, 10%);
+    box-shadow: none;
+    border-radius: 3px;
+    background: @input-color;
+
+    height: 55px;
+    line-height: 55px;
+    padding: 0 15px;
+
+
+    .bouncy-transition;
+
+    &.error { border-left: solid 5px @error; }
+    &.success { border-left: solid 5px @success; }
+
+
+    &:hover, &:focus, &:not(:placeholder-shown) {
+        padding-left: 35px;
+        border-color: fade(@base, 60%);
+        background: darken(@container-background, 10%);
+    }
+}
+select {
+    .input-style;
+}
+textarea {
+    .input-style;
+    min-height: 180px;
+    font-size: 11px;
+    line-height: 1;
+    padding: 15px 25px !important;
+}
+input[type=checkbox], input[type=radio] {
+    height: auto;
+    width: auto;
+    display: inline-block;
+}
+input[type=submit], button[type=submit] {
+    .btn-base;
+    .fill-out;
+    .btn-dankness;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+label, .label {
+    font-size: 11px;
+    line-height: 1;
+    color: @heading-color;
+    display: block;
+    position: relative;
+    user-select: none;
+    text-align: left;
+    .heading-font;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 20px 0 3px;
+
+    &[for] { cursor: pointer; }
+}
+

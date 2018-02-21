@@ -1,0 +1,121 @@
+/*===============================
+=            HELPERS            =
+===============================*/
+.quick-operation-example {
+    font-size: 20px;
+
+    &.x2 {
+        font-size: 20px * 2;
+    }
+}
+
+
+
+
+
+
+/*======================================
+=            PRIVATE MIXINS            =
+======================================*/
+
+.make-grid-columns(@count, @iteration: 1) when (@count >= @iteration) {
+    .col-@{iteration} {
+        width: (@iteration * 100% / @count);
+    }
+
+    .make-grid-columns(@count, (@iteration + 1));
+}
+.make-grid-columns(@grid-count);
+
+.containerize-me() {
+    background: @container-background;
+    position: relative;
+    max-width: calc(~'100% - 20px');
+    margin: 10px auto;
+    .nice-shadow;
+
+    @media @super-wide-screen-up {
+        max-width: 1480px;
+    }
+}
+.cool-button(@background, @color: #fff) {
+    display: inline-block;
+    padding: 25px 60px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all 225ms ease;
+
+    background: @background;
+    color: @color;
+
+    &:focus,
+    &:hover {
+        background: lighten(@background, 30%);
+    }
+}
+
+// button {
+//     .cool-button(red);
+// }
+
+// ol li a {
+//     // .cool-button(green, blue);
+// }
+// .green-blue-button {
+//     .cool-button(green, blue);
+// }
+
+
+
+
+
+/*==========================================================
+=            PUBLIC MIXINS, aka UTILITY CLASSES            =
+==========================================================*/
+.super-bold {
+    font-weight: 900;
+}
+.underline-me {
+    text-decoration: underline;
+}
+
+
+.row {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+.col {
+    float: left;
+}
+
+// 300,300i,400,400i,700,700i,900,900
+.base-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+// 300,400,700
+.heading-font {
+    font-family: 'Oswald', sans-serif;
+}
+
+.default-transition { transition: all 225ms ease; }
+.bouncy-transition { transition: all 450ms cubic-bezier(0.32,1.25,0.375,1.15); }
+
+.nice-shadow {
+    box-shadow: 0 2px 3px darken(@shadow, 10%);
+}
+
+.box-me(@background) {
+    background: @background;
+    padding: 25px;
+    .nice-shadow;
+}
+

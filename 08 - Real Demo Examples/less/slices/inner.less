@@ -1,0 +1,77 @@
+/*==================================================
+=            INNER / AKA, ARTICLE STUFF            =
+==================================================*/
+article {
+    .containerize-me();
+
+    padding: 60px;
+    @media @desktop-down {
+        padding: 40px;
+    }
+    @media @phone-down {
+        padding: 20px;
+    }
+
+
+    // Spacing
+    hr, blockquote, img, iframe, table, ol, ul, pre {
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        @media @tablet-down {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media @phone-down {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+
+    // Inner Styles
+    iframe,
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    iframe {
+        width: 100%;
+        min-height: 400px;
+    }
+
+
+    ul, ol, dl {
+        .box-me(darken(@body-background, 3%));
+
+        ol, ul, dl {
+            box-shadow: none;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+
+    pre {
+        .box-me(@link);
+        color: #fff;
+    }
+
+
+    table {
+        .box-me(@base);
+        color: fade(#fff, 90%);
+
+        width: 100%;
+        text-align: center;
+
+        td, th {
+            padding: 10px 5px;
+        }
+
+    }
+
+}

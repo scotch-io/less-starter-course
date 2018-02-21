@@ -1,0 +1,110 @@
+/*============================
+=            BASE            =
+============================*/
+body {
+    background: @body-background;
+    .base-font;
+    color: @base;
+
+    font-size: 17px;
+
+    @media @tablet-down {
+        font-size: 15px;
+    }
+}
+
+a {
+    .default-transition;
+    color: @link;
+
+    &:focus,
+    &:hover {
+        color: @link-hover;
+    }
+
+    &:active {
+        color: darken(@link-hover, 25%);
+    }
+}
+
+p {
+    margin-bottom: 25px;
+
+    a { font-weight: 700; }
+}
+
+h1, .h1 {
+    .heading-font;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @heading-color;
+    letter-spacing: -0.025em;
+    font-size: 70px;
+    line-height: 1.1;
+    font-style: normal;
+    opacity: 1;
+
+    @media @desktop-down { font-size: 50px; }
+    @media @tablet-down { font-size: 40px; }
+}
+
+h2, .h2 {
+    .h1;
+    font-size: 60px;
+    color: @heading-color-alt;
+
+    @media @desktop-down { font-size: 40px; }
+    @media @tablet-down { font-size: 30px; }
+}
+h3, .h3 {
+    .h2;
+    font-size: 40px;
+    color: @heading-color;
+
+    @media @desktop-down { font-size: 30px; }
+    @media @tablet-down { font-size: 20px; }
+}
+h4, .h4 {
+    .h3;
+    font-size: 30px;
+    color: @heading-color-alt;
+
+    @media @desktop-down { font-size: 20px; }
+    @media @tablet-down { font-size: 15px; }
+}
+h5, .h5 {
+    .h4;
+    font-size: 20px;
+
+    @media @desktop-down { font-size: 18px; }
+    @media @tablet-down { font-size: 14px; }
+}
+h6, .h6 {
+    .h5;
+    font-size: 14px;
+
+    @media @tablet-down { font-size: 12px; }
+}
+hr {
+    border: none;
+    width: 100%;
+    max-width: 194px;
+    height: 7px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background: lighten(@link, 25%);
+}
+blockquote, .blockquote {
+    .box-me(@body-background);
+    font-style: italic;
+
+    footer {
+        .h6;
+        margin-top: 25px;
+    }
+}
+
+::selection {
+    background: @link;
+    color: #fff;
+}

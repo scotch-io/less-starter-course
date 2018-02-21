@@ -1,0 +1,35 @@
+.site-header {
+    background: #fff;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: #FB7D53;
+                display: block;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 14px;
+                letter-spacing: 0.1em;
+                padding: 0 5px;
+                text-decoration: none;
+
+                &:before,
+                &:after { content: '*'; }
+
+                &:hover,
+                &:focus {
+                    color: #FF0063;
+                }
+            }
+        }
+    }
+}

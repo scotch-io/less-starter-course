@@ -1,6 +1,8 @@
-# Getting Started with Less
+# Getting Started with Less Video Course
 
 A dead-simple introduction course the CSS Preprocessor
+
+![Getting Started with Less Video Course](https://cdn.scotch.io/2/cEAjCiQYRlmDy0FiR7if_getting-started-with-less-scotch-school.png.jpg)
 
 
 ## Description

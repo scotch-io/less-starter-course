@@ -1,0 +1,50 @@
+/*===================================
+=            SITE HEADER            =
+===================================*/
+.site-header {
+    // @nav-link: blue;
+
+    .containerize-me();
+
+    text-align: center;
+    padding: 25px;
+
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            // @nav-link: red;
+            display: inline-block;
+
+            a {
+                // @nav-link: green;
+
+                color: @nav-link;
+                display: block;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 14px;
+                letter-spacing: 0.1em;
+                padding: 0 5px;
+                text-decoration: none;
+
+                &:before,
+                &:after { content: '*'; }
+
+                &:hover,
+                &:focus {
+                    color: @nav-link-hover;
+                }
+            }
+
+            // &:nth-child(even) a { color: green; }
+            // &:nth-child(4) a { color: green; }
+            // &:last-child a { color: green; }
+        }
+    }
+
+    // @nav-link: blue; This is still in parent scope!
+}
