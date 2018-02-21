@@ -7,7 +7,7 @@ A dead-simple introduction course the CSS Preprocessor
 
 ## Description
 
-Getting Started with Less is designed from the ground-up to intro you new web developers into using preprocessors. This course is designed for all skill-levels and covers everything you need to know to get up and running.
+Getting Started with Less is designed from the ground-up to intro new web developers into using CSS preprocessors. This course is designed for all skill-levels and covers everything you need to know to get up and running.
 
 ## Goals
 
